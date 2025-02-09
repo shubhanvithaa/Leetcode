@@ -1,4 +1,4 @@
-#finding duplicates.
+#finding duplicates.-- Time complexity o(n^2)
 
 nums =  list(map(int, input("Enter numbers separated by space: ").split()))
 count = 0
@@ -15,3 +15,7 @@ if(count == 0):
     print("False")
 else:
     print("True")
+
+
+
+
