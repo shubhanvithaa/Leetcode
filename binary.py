@@ -1,33 +1,28 @@
-a = "10"
-b = "1"
+a = "1"
+b = "111"
 
-# Make lengths equal
+
+
 len_a = len(a)
 len_b = len(b)
-a = a.zfill(max(len_a, len_b))
-b = b.zfill(max(len_a, len_b))
-
-# Reverse for processing from LSB to MSB
-a = a[::-1]
-b = b[::-1]
-
-res = ""
-carry = 0
-len_str = len(a)
-
-for i in range(len_str):
+a = a.zfill(len_b)
+b = b.zfill(len_a)
+a = a[: : -1]
+b = b[: : -1]
+len_a = len(a)
+len_b = len(b)
+carry =0
+res = ''
+for i in range(len_a):
     bit_a = int(a[i])
     bit_b = int(b[i])
 
-    sum_bits = bit_a + bit_b + carry
-    res += str(sum_bits % 2)  # Append sum modulo 2
-    carry = sum_bits // 2  # Update carry
+    res += str((bit_a + bit_b + carry)%2)
+    carry = (bit_a + bit_b + carry)//2
 
-# If there's a carry left, add it
-if carry:
-    res += "1"
-
-# Reverse back to get final binary result
-res = res[::-1]
-
+if (carry == 1):
+    res+="1"
+res =  res[::-1]
 print(res)  # Expected output: "11"
+or 
+return ' '.join(s.split()[::-1])
