@@ -24,5 +24,4 @@ if (carry == 1):
     res+="1"
 res =  res[::-1]
 print(res)  # Expected output: "11"
-or 
-return ' '.join(s.split()[::-1])
+
