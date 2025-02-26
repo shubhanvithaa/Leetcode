@@ -5,8 +5,6 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-   
-
         point_s = 0
         point_t = 0
         count = 0
